@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1612317025010820}
+  m_IsPrefabParent: 1
+--- !u!1 &1612317025010820
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4011661240382800}
+  - component: {fileID: 114176820117533154}
+  - component: {fileID: 114383708579016710}
+  - component: {fileID: 114955377772121374}
+  - component: {fileID: 114781245603893824}
+  - component: {fileID: 114675023166619956}
+  m_Layer: 0
+  m_Name: _GM
+  m_TagString: GM
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1970427041975070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4138066235438936}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: SpawnPoint
+  m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4011661240382800
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612317025010820}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4138066235438936}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4138066235438936
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1970427041975070}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -37.48, y: -1.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4011661240382800}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114176820117533154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612317025010820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669e5b79d7e3dea4799cf972ef0642c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgrounds:
+  - {fileID: 0}
+  - {fileID: 0}
+  smoothing: 3
+--- !u!114 &114383708579016710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612317025010820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58e25d68168caaa4fa5b0f5dc09ff9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uM: {fileID: 0}
+  wp: {fileID: 0}
+  goNextlvl: {fileID: 0}
+  waveSpawner: {fileID: 114781245603893824}
+  playerPrefab: {fileID: 4890980703913576, guid: 8fc8fab24d9d9364e9b568a71d938920,
+    type: 2}
+  spawnPoint: {fileID: 4138066235438936}
+  spawnDelay: 2
+  spawnEnemyDelay: 1.5
+  spawnPrefab: {fileID: 4032335599376706, guid: 9d84e749b74b1724fbe29c838690b261,
+    type: 2}
+  cameraShake: {fileID: 114955377772121374}
+  Respawn: Spawn
+  MusicGame: MusicGame
+  gameOverUI: {fileID: 0}
+  upgradeMenu: {fileID: 0}
+  enemyExplosionSound: Explosion
+--- !u!114 &114675023166619956
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612317025010820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39535a26f02ec1745ae618137ee6bfbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wp: {fileID: 0}
+  maxHealth: 100
+  healthRegenRate: 2
+  movementSpeed: 10
+  damage: 20
+--- !u!114 &114781245603893824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612317025010820}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70a0839cc49fc1041bd9e9d0926e2007, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - name: AlienInv
+    enemy: {fileID: 4563657161883924, guid: 760771e5a55cc274f891c6b55d952382, type: 2}
+    count: 3
+    rate: 1
+  - name: alieninv2
+    enemy: {fileID: 4563657161883924, guid: 760771e5a55cc274f891c6b55d952382, type: 2}
+    count: 4
+    rate: 1
+  - name: alieninv3
+    enemy: {fileID: 4563657161883924, guid: 760771e5a55cc274f891c6b55d952382, type: 2}
+    count: 7
+    rate: 2
+  - name: alieninv4
+    enemy: {fileID: 0}
+    count: 0
+    rate: 0
+  nextWave: 0
+  timeBetweenWaves: 4
+  spawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &114955377772121374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1612317025010820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c65aa1f0dbeba4ead3f4f356919cc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 0}
